@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A program with a local webpage to get a Raspberry Pi to locally print and fix my printer's wifi issues.",
   "main": "index.js",
+  "type":"module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/2p2i5/printService/issues"
   },
-  "homepage": "https://github.com/2p2i5/printService#readme"
+  "homepage": "https://github.com/2p2i5/printService#readme",
+  "dependencies": {
+    "print-js": "^1.6.0"
+  }
 }
