@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      
+      import {
+        getCompletedQueue,
+        getNotCompletedQueue,
+        getPrinterNames,
+        getPrinterOptions,
+        getAllPrinterOptions,
+        printBuffer,
+        printFile,
+        cancelAllJobs,
+        cancelJob,
+      } from "node-cups";
+      async function handleIt(event) {
+        alert(event.target.field.value);
+        const file = "./testpage.pdf" 
+        const params = {
+        printerOptions: {
+            media:"Letter"
+        }
+        }
+        const result = await printFile(file,params);
+        alert(result);
+      }
+
+    </script>
+  </head>
+
+<body>
+    <form name="myform" onsubmit="javascript:handleIt(event)">
+      <input name="field"  type="string" value="Here"/>
+      <input name="Submit"  type="submit" value="Update"/>
+    </form>
+</body>
+</html>
