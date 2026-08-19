@@ -10,3 +10,4 @@ The idea is for a local computer to send the Raspberry Pi a file and for it, thr
 # Requirements
 You might have to manually download node in order to run the javascript.
 You may also need to run `npm install` in the root directory to install dependencies.
+I am using a Raspberry Pi B+ v1.2 with Debian
