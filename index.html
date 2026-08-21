@@ -1,8 +1,7 @@
 <html>
   <head>
     <script type="text/javascript">
-      async function handleIt(event) {
-        import {
+      import {
           getCompletedQueue,
           getNotCompletedQueue,
           getPrinterNames,
@@ -12,7 +11,8 @@
           printFile,
           cancelAllJobs,
           cancelJob,
-        } from "node-cups";
+      } from "node-cups";
+      async function handleIt(event) {
         alert(event.target.field.value);
         const file = "./testpage.pdf" 
         const params = {
