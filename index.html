@@ -11,7 +11,7 @@
           printFile,
           cancelAllJobs,
           cancelJob,
-      } from "node-cups";
+      } from "./node_modules/node-cups/dist/cups.d.ts";
       async function handleIt(event) {
         alert(event.target.field.value);
         const file = "./testpage.pdf" 
