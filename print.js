@@ -1,4 +1,4 @@
-const {
+import {
     getCompletedQueue,
     getNotCompletedQueue,
     getPrinterNames,
@@ -8,7 +8,7 @@ const {
     printFile,
     cancelAllJobs,
     cancelJob,
-} = require("node-cups");
+} from "node-cups";
 
 
 async function handleIt(event) {
