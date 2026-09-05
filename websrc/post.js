@@ -1,5 +1,5 @@
 async function handleIt(event) {
-    .ajax({
+    $.ajax({
         type: "POST", 
         url: "print.js",  
         data: {
