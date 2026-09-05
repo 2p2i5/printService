@@ -1,12 +1,23 @@
 <html>
-  <head>
-    <link rel="icon" type="image/x-icon" href="./favicon.ico">
-  </head>
+
+<head>
+  <script>
+    const localIP = '192.186.68.65' // change if server ip different, needs to be reserved and static
+
+    const form = document.getElementById('registrationForm');
+    form.addEventListener('submit', function (event) {
+      const value = document.getElementById('field');
+      alert(value);
+    });
+  </script>
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
+</head>
 
 <body>
-    <form name="myform" onsubmit="javascript:handleIt(event)">
-      <input name="field"  type="string" value="Here"/>
-      <input name="Submit"  type="submit" value="Update"/>
-    </form>
+  <form name="myform" onsubmit="javascript:handleIt(event)">
+    <input name="field" type="string" value="Here" />
+    <input name="Submit" type="submit" value="Update" />
+  </form>
 </body>
+
 </html>
