@@ -10,9 +10,7 @@ import {
     cancelJob,
 } from "node-cups";
 
-
-async function handleIt(event) {
-    alert(event.target.field.value);
+async function testPrint() {
     const file = "./testpage.pdf" 
     const params = {
         printerOptions: {
@@ -20,6 +18,19 @@ async function handleIt(event) {
         }
     }
     const result = await printFile(file,params);
-
-    alert(result);
 }
+
+const http = require('http');
+
+const requestHandler = (req, res) => {
+  console.log(`Received ${req.method} request for ${req.url}`);
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Request processed successfully');
+};
+
+const server = http.createServer(requestHandler);
+
+server.listen(3000, () => {
+  console.log('Server is running on localhost:3000');
+});
