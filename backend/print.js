@@ -10,6 +10,9 @@ import {
     cancelJob,
 } from "node-cups";
 
+import * as http from 'http';
+
+
 async function testPrint() {
     const file = "./testpage.pdf" 
     const params = {
@@ -19,8 +22,6 @@ async function testPrint() {
     }
     const result = await printFile(file,params);
 }
-
-const http = require('http');
 
 const requestHandler = (req, res) => {
   console.log(`Received ${req.method} request for ${req.url}`);
