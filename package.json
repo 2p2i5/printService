@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "cors": "^2.8.6",
     "node-cups": "^1.2.3"
   }
 }
